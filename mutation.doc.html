@@ -35,6 +35,11 @@
                 Mutation
             </a>
         </li>
+        <li  title="Subscription">
+            <a href="subscription.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Subscription
+            </a>
+        </li>
     </ul>
 </div>
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
@@ -80,19 +85,49 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Objects</h4>
     <ul>
-        <li  title="Note">
-            <a href="note.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                Note
+        <li  title="Comment">
+            <a href="comment.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Comment
             </a>
         </li>
-        <li  title="NotesConnection">
-            <a href="notesconnection.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                NotesConnection
+        <li  title="CommentConnection">
+            <a href="commentconnection.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CommentConnection
             </a>
         </li>
-        <li  title="Schema">
-            <a href="schema.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                Schema
+        <li  title="Post">
+            <a href="post.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Post
+            </a>
+        </li>
+        <li  title="PostConnection">
+            <a href="postconnection.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                PostConnection
+            </a>
+        </li>
+        <li  title="Tag">
+            <a href="tag.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Tag
+            </a>
+        </li>
+        <li  title="TagConnection">
+            <a href="tagconnection.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TagConnection
+            </a>
+        </li>
+        <li  title="User">
+            <a href="user.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                User
+            </a>
+        </li>
+        <li  title="Watching">
+            <a href="watching.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Watching
+            </a>
+        </li>
+        <li  title="WatchingConnection">
+            <a href="watchingconnection.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                WatchingConnection
             </a>
         </li>
         <li  title="__Directive">
@@ -173,7 +208,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Mutation</span> {</li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>id</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>title</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>content</strong>: </span></span></li><li><span class="tab"><span class="meta">createNote</span>(<span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>!, <span class="meta">title</span>: <a class="support type" href="string.doc.html">String</a>!, <span class="meta">content</span>: <a class="support type" href="string.doc.html">String</a>!): <a class="support type" href="note.doc.html">Note</a> </span></li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>id</strong>: </span></span></li><li><span class="tab"><span class="meta">deleteNote</span>(<span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>!): <a class="support type" href="note.doc.html">Note</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Mutation</span> {</li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>firstName</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>lastName</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>email</strong>: </span></span></li><li><span class="tab"><span class="meta">createUser</span>(<span class="meta">firstName</span>: <a class="support type" href="string.doc.html">String</a>, <span class="meta">lastName</span>: <a class="support type" href="string.doc.html">String</a>, <span class="meta">email</span>: <a class="support type" href="string.doc.html">String</a>!): <a class="support type" href="user.doc.html">User</a> </span></li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>authorId</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>title</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>body</strong>: </span></span></li><li><span class="tab"><span class="meta">createPost</span>(<span class="meta">authorId</span>: <a class="support type" href="string.doc.html">String</a>!, <span class="meta">title</span>: <a class="support type" href="string.doc.html">String</a>!, <span class="meta">body</span>: <a class="support type" href="string.doc.html">String</a>!): <a class="support type" href="post.doc.html">Post</a> </span></li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>id</strong>: </span></span></li><li><span class="tab"><span class="meta">deletePost</span>(<span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>!): <a class="support type" href="post.doc.html">Post</a> </span></li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>postId</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>authorId</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>body</strong>: </span></span></li><li><span class="tab"><span class="meta">commentOnPost</span>(<span class="meta">postId</span>: <a class="support type" href="string.doc.html">String</a>!, <span class="meta">authorId</span>: <a class="support type" href="string.doc.html">String</a>!, <span class="meta">body</span>: <a class="support type" href="string.doc.html">String</a>!): <a class="support type" href="comment.doc.html">Comment</a> </span></li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>name</strong>: </span></span></li><li><span class="tab"><span class="meta">createTag</span>(<span class="meta">name</span>: <a class="support type" href="string.doc.html">String</a>!): <a class="support type" href="tag.doc.html">Tag</a> </span></li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>id</strong>: </span></span></li><li><span class="tab"><span class="meta">deleteTag</span>(<span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>!): <a class="support type" href="tag.doc.html">Tag</a> </span></li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>userId</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>ticker</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>createdOn</strong>: </span></span></li><li><span class="tab"><span class="meta">createWatching</span>(<span class="meta">userId</span>: <a class="support type" href="id.doc.html">ID</a>!, <span class="meta">ticker</span>: <a class="support type" href="string.doc.html">String</a>!, <span class="meta">createdOn</span>: <a class="support type" href="string.doc.html">String</a>!): <a class="support type" href="watching.doc.html">Watching</a> </span></li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>id</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>userId</strong>: </span></span></li><li><span class="tab"><span class="meta">deleteWatching</span>(<span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>!, <span class="meta">userId</span>: <a class="support type" href="id.doc.html">ID</a>!): <a class="support type" href="watching.doc.html">Watching</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -184,7 +219,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="schema.doc.html" title="Schema - ">Schema<em></em></a><li></ul>
+        <div class="require-by anyone">This element is not required by anyone</div>
     </div>
 </section>
 <footer>

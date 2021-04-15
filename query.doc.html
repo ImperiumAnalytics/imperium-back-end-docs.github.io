@@ -35,6 +35,11 @@
                 Mutation
             </a>
         </li>
+        <li  title="Subscription">
+            <a href="subscription.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Subscription
+            </a>
+        </li>
     </ul>
 </div>
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
@@ -80,19 +85,49 @@
 <div class="slds-grid slds-grid--vertical slds-navigation-list--vertical">
     <h4 class="slds-text-title--caps slds-p-around--medium">Objects</h4>
     <ul>
-        <li  title="Note">
-            <a href="note.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                Note
+        <li  title="Comment">
+            <a href="comment.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Comment
             </a>
         </li>
-        <li  title="NotesConnection">
-            <a href="notesconnection.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                NotesConnection
+        <li  title="CommentConnection">
+            <a href="commentconnection.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                CommentConnection
             </a>
         </li>
-        <li  title="Schema">
-            <a href="schema.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
-                Schema
+        <li  title="Post">
+            <a href="post.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Post
+            </a>
+        </li>
+        <li  title="PostConnection">
+            <a href="postconnection.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                PostConnection
+            </a>
+        </li>
+        <li  title="Tag">
+            <a href="tag.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Tag
+            </a>
+        </li>
+        <li  title="TagConnection">
+            <a href="tagconnection.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                TagConnection
+            </a>
+        </li>
+        <li  title="User">
+            <a href="user.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                User
+            </a>
+        </li>
+        <li  title="Watching">
+            <a href="watching.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                Watching
+            </a>
+        </li>
+        <li  title="WatchingConnection">
+            <a href="watchingconnection.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
+                WatchingConnection
             </a>
         </li>
         <li  title="__Directive">
@@ -173,7 +208,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Query</span> {</li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>limit</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>nextToken</strong>: </span></span></li><li><span class="tab"><span class="meta">listNotes</span>(<span class="meta">limit</span>: <a class="support type" href="int.doc.html">Int</a>, <span class="meta">nextToken</span>: <a class="support type" href="id.doc.html">ID</a>): <a class="support type" href="notesconnection.doc.html">NotesConnection</a>! </span></li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>id</strong>: </span></span></li><li><span class="tab"><span class="meta">getNote</span>(<span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>!): <a class="support type" href="note.doc.html">Note</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">Query</span> {</li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>id</strong>: </span></span></li><li><span class="tab"><span class="meta">readPost</span>(<span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>!): <a class="support type" href="post.doc.html">Post</a> </span></li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>limit</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>nextToken</strong>: </span></span></li><li><span class="tab"><span class="meta">listPosts</span>(<span class="meta">limit</span>: <a class="support type" href="int.doc.html">Int</a>, <span class="meta">nextToken</span>: <a class="support type" href="string.doc.html">String</a>): <a class="support type" href="postconnection.doc.html">PostConnection</a> </span></li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>id</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>userId</strong>: </span></span></li><li><span class="tab"><span class="meta">readWatching</span>(<span class="meta">id</span>: <a class="support type" href="id.doc.html">ID</a>!, <span class="meta">userId</span>: <a class="support type" href="id.doc.html">ID</a>!): <a class="support type" href="watching.doc.html">Watching</a> </span></li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>userId</strong>: </span></span></li><li><span class="tab"><span class="meta">listWatchings</span>(<span class="meta">userId</span>: <a class="support type" href="id.doc.html">ID</a>!): <a class="support type" href="watchingconnection.doc.html">WatchingConnection</a> </span></li><li></li><li><span class="tab"><span class="comment line"># Arguments</span></span></li><li><span class="tab"><span class="comment line">#   <strong>limit</strong>: </span></span></li><li><span class="tab"><span class="comment line">#   <strong>nextToken</strong>: </span></span></li><li><span class="tab"><span class="meta">listTags</span>(<span class="meta">limit</span>: <a class="support type" href="int.doc.html">Int</a>, <span class="meta">nextToken</span>: <a class="support type" href="string.doc.html">String</a>): <a class="support type" href="tagconnection.doc.html">TagConnection</a> </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -184,7 +219,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="schema.doc.html" title="Schema - ">Schema<em></em></a><li></ul>
+        <div class="require-by anyone">This element is not required by anyone</div>
     </div>
 </section>
 <footer>
